@@ -72,8 +72,8 @@ function format(displayName, type) {
 
 function getOutputPath(copyOutDir, compileOpts) {
   const outputPath = copyOutDir
-    .replaceAll('{{pageName}}', compileOpts.pageName)
-    .replaceAll('{{componentName}}', compileOpts.componentName)
+    .replace(/{{pageName}}/g, compileOpts.pageName)
+    .replace(/{{componentName}}/g, compileOpts.componentName)
     .replace(/\.hbs$/, '')
 
   return outputPath

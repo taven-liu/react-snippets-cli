@@ -1,15 +1,17 @@
-import React from "react";
+import React, { FC } from 'react'
 
-import styles from "./style.module.css";
+import styles from './style.module.css'
 
-export interface I{{componentName}}Props {}
+export interface {{componentName}}Props {
+  todo?: string
+}
 
-const {{componentName}} = () => {
+const {{componentName}}: FC<{{componentName}}Props> = () => {
   return (
     <div className={styles.root}>
-      TODO
+      TODO {{componentName}}Props
     </div>
-  );
-};
+  )
+}
 
-export default {{componentName}};
+export default {{componentName}}
